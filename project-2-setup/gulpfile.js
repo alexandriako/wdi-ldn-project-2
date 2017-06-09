@@ -61,10 +61,16 @@ gulp.task('serve', sequence('clean', ['es6', 'sass']), () => {
   return nodemon().on('start', () => browserSync.reload());
 });
 
-gulp.task('build', sequence('clean', ['sass', 'es6', 'assets']));
-
-gulp.task('default', sequence('clean', ['sass', 'es6', 'assets', 'serve']), () => {
+gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/*.js', ['es6']);
   gulp.watch('src/assets/**/*', ['assets']);
 });
+
+const defaultTask = () => {
+  return gulp.start(['serve', 'watch']);
+};
+
+gulp.task('build', sequence('clean', ['sass', 'es6', 'assets']));
+
+gulp.task('default', ['build'], defaultTask);
