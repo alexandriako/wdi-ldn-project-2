@@ -1,0 +1,174 @@
+@import "bootstrap/bootstrap-grid";
+@import "bootstrap/bootstrap-reboot";
+@import "bootstrap/bootstrap";
+
+p {
+  font-size: 20px;
+}
+.navbar-toggleable-md {
+  h1 {
+    color: black;
+    margin-bottom: 60px;
+    float: left;
+  }
+  ul{
+    font-size: 20px;
+    li {
+      a{
+        color: black;
+      }
+    }
+  }
+}
+
+main {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.jumbotron {
+  background-image: url("/assets/images/jumbotron.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.about {
+  img {
+    height: 95%;
+    width: 95%;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  p {
+    width: 95%;
+    margin: 5px auto;
+  }
+}
+
+.dressCode {
+  h1 {
+    margin-bottom: 20px;
+  }
+  p {
+    width: 95%;
+    margin: 5px auto;
+  }
+  .container {
+    margin: 20px auto;
+  }
+  img {
+    border-radius: 5px;
+    margin-bottom: 30px;
+  }
+}
+
+.register {
+  h1 {
+    margin-bottom: 30px;
+  }
+  .btn {
+    background-color: rgb(211, 74, 181);
+    border-color: rgb(211, 74, 181);
+  }
+  .input {
+    width: 300px;
+  }
+}
+
+.login {
+  h1 {
+    margin-bottom: 30px;
+  }
+  .btn {
+    background-color: rgb(211, 74, 181);
+    border-color: rgb(211, 74, 181);
+  }
+  .input {
+    width: 300px;
+  }
+}
+
+.locations {
+  margin-top: 10px;
+  img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  }
+  ul {
+    list-style: none;
+  }
+  .col-lg-4 {
+    margin: 20px auto;
+  }
+}
+
+.show {
+  img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+    text-align: left;
+    margin: 30px auto;
+  .posts{
+    color: rgb(211, 74, 181);
+  }
+  h5 {
+    text-align: center;
+  }
+}
+
+.user {
+  margin: 30px auto;
+  img{
+    border-radius: 20px;
+    margin: 30px auto;
+  }
+  a {
+    border: solid blue;
+    background-color: blue;
+    color: white;
+  }
+  h1 {
+    margin-bottom: 25px;
+  }
+  .deleteAccount {
+    color: white;
+    height: 42px;
+    background-color: rgb(211, 74, 181);
+  }
+}
+
+.postsNew {
+    color: rgb(211, 74, 181);
+  }
+
+.postsPost {
+  text-align: center;
+  .btn {
+    color: white;
+    background-color: rgb(211, 74, 181);
+  }
+  input {
+    width: 300px;
+  }
+}
+
+.footerCaption {
+  color: grey;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        text-align: center;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}

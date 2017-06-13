@@ -1,0 +1,46 @@
+<div class="large-12 columns">
+  <div class="column">
+  <img src="<%= post.imageSRC %>" alt="<%= post.name %>">
+  <h2><%= post.name %></h2>
+
+  <p>
+    <%= post.caption %>
+  </p>
+  <h2><%= post.createdBy.username %></h2>
+</div>
+<div class="column">
+  <% if(locals.isAuthenticated) { %>
+  <section>
+    <h4>Leave a comment</h4>
+    <form method="POST" action="/posts/<%= post.id %>/comments">
+      <textarea name="content" id="content" placeholder="Comment"></textarea>
+      <button class="button">Leave a comment</button>
+    </form>
+  </section>
+<% } %>
+
+<section>
+  <h4>Comments</h4>
+  <% post.comments.forEach((comment) => { %>
+    <p><%= comment.content %></p>
+    <small><%= comment.createdBy.username %></small>
+
+    <% if(locals.isAuthenticated) { %>
+      <form method="POST" action="/posts/<%= post.id %>/comments/<%= comment.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+      </form>
+    <% } %>
+  <% }) %>
+</section>
+
+  <% if(locals.isAuthenticated && post.belongsTo(currentUser)) { %>
+  <a href="/posts/<%= post.id %>/edit">Edit</a>
+  <form method="POST" action="/posts/<%= post.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>
+<% } %>
+</div>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="container locations">
+  <ul class="row">
+    <% cities.forEach(city => { %>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <div class="container">
+        <a href="/cities/<%= city.id %>">
+          <img class="img-fluid" src="<%= city.image %>" alt="cityImage">
+        </a>
+        <h4><%= city.name %></h4>
+      </div>
+    </div>
+    <%  }); %>
+  </ul>
+</div>

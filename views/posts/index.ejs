@@ -1,0 +1,15 @@
+<% posts.forEach((post) => { %>
+<div class="container">
+  <div class="container">
+  <div>
+      <img src="<%= post.imageSRC %>">
+
+      <p><%= post.caption %></p>
+      <%= post %>
+    </a>
+    <a href="/posts/<%= post.id %>"><h3>Created By: </h3></a>
+  </div>
+<% }) %>
+  </div>
+  <a class="postsNew" href="/posts/new"><h4>New</h4></a>
+</div>

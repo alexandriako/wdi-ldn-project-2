@@ -1,0 +1,17 @@
+<div class="container user">
+  <% if (user.image) { %>
+    <img class="img-fluid" src="<%= user.imageSRC %>" alt="<%= user.username %>">
+  <% } else { %>
+    <image src="http://www.oldpotterybarn.co.uk/wp-content/uploads/2015/06/default-medium.png" alt="Default">
+  <% } %>
+  <h1 class="title"><%= user.username %></h1>
+  <form method="POST" action="/users/<%= user.id %>">
+    <a href="/users/<%= user.id %>/edit" class="btn">Edit Account</a>
+    <input type="hidden" name="_method" value="DELETE">
+    <button class="btn deleteAccount">Delete Account</button>
+  </form>
+</div>
+
+<div class="container posts">
+  <ul></ul>
+</div>
