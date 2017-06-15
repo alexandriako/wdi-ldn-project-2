@@ -1,26 +1,30 @@
 <h1 class="title" data-location="<%= JSON.stringify({ lat: city.lat, lng: city.lng }) %>"><%= city.name %></h1>
-<div class="container show">
-  <div class="container">
-    <img src="<%= city.image %>" width="100%">
+<div class="container citiesShow">
+  <div class="container info">
+    <h3 class="data" data-location="<%= JSON.stringify({ lat: city.lat, lng: city.lng }) %>" data-category="<%= JSON.stringify({ id: city.categoryId }) %>"></h3>
+    <img src="<%= city.showImage %>" width="100%">
     <h4>State: <%= city.state %></h4>
-    <h4>Style: <%= city.dressCode %></h4>
+    <h4>Dress Code: <%= city.dressCode %></h4>
     <h4>Current Weather: <span class="weather"></span></h4>
 
   </div>
-  <hr>
+
   <div class="container">
     <% if(!locals.isAuthenticated) { %>
     <a href="/cities"><h5>Back</h5></a>
     <% } else { %>
 
     <div>
-      <h4>Trending Venues</h4>
-      <ul></ul>
+      <a class="posts" href="/posts"><h3 class="postsText"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Outfit Inspo</h3></a>
     </div>
 
-    <div>
-      <a class="posts" href="/posts"><h3>Posts</h3></a>
+    <div class="container">
+      <h4 class="getShopping">Get Shopping</h4>
+      <span class="categories"></span>
+
+      <div class="button"><button class="btn">Más</button></div>
     </div>
+
     <% } %>
   </div>
 

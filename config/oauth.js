@@ -11,6 +11,25 @@
   };
   console.log(github);
 
+  const instagram = {
+    loginUrl: 'https://api.instagram.com/oauth/authorize/',
+
+    accessTokenUrl: 'https://api.instagram.com/oauth/access_token',
+
+    redirectUri: 'http://localhost:8000/oauth/instagram',
+
+    clientId: process.env.INSTAGRAM_CLIENT_ID,
+
+    clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
+
+    response: 'code',
+    getLoginURL() {
+      return `${this.loginUrl}?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=${this.response}`;
+    }
+  };
+  console.log(instagram);
+
   module.exports = {
-    github
+    github,
+    instagram
   };

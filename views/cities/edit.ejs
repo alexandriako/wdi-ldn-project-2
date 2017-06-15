@@ -1,5 +1,6 @@
-<h1>Edit <%= city.name %></h1>
+<h1>Edit: <%= city.name %></h1>
 
+<div class="container citiesEdit">
 <form action="/cities/<%= city.id %>" method="post">
   <input type="hidden" name="_method" value="put">
   <div class="form-group">
@@ -34,3 +35,4 @@
 
   <button class="btn btn-success">Update City!</button>
 </form>
+</div>

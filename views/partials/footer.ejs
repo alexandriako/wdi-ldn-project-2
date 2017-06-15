@@ -1,0 +1,27 @@
+<nav class="navbar fixed-bottom navbar-inverse bg-inverse">
+      <% if(!locals.isAuthenticated) { %>
+
+    <ul class="list-inline">
+      <li class="nav-item">
+        <a class="nav-link nav" href="/login"><span class="fa fa-user"></span> Log In</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link nav" href="/register"><span class="fa fa-address-book"></span> Register</a>
+      </li>
+    </ul>
+
+        <% } else { %>
+
+    <ul class="list-inline">
+      <li class="nav-item">
+        <a class="nav-link nav" href="/users/<%= currentUser.id %>"><span class="fa fa-heart"> Profile</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link nav" href="/logout"><span class="fa fa-hand-peace-o"> Log out</a>
+      </li>
+    </ul>
+
+      <% } %>
+</nav>

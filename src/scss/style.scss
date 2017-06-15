@@ -1,18 +1,52 @@
-@import "bootstrap/bootstrap-grid";
-@import "bootstrap/bootstrap-reboot";
+
 @import "bootstrap/bootstrap";
+
+@font-face {
+  font-family: 'f37_bella';
+  src: url('../assets/fonts/f37bella-regular-webfont.eot');
+  src: url('../assets/fonts/f37bella-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/f37bella-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/f37bella-regular-webfont.woff') format('woff'),
+       url('../assets/fonts/f37bella-regular-webfont.ttf') format('truetype'),
+       url('../assets/fonts/f37bella-regular-webfont.svg#f37_bellaregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+  font-family: 'Karla', sans-serif;
+}
+
+.logo {
+  text-align: center;
+  color: black;
+  margin: 40px auto;
+  font-family: 'f37_bella';
+  letter-spacing: 2px;
+  font-weight: bold;
+}
 
 p {
   font-size: 20px;
 }
+
+
 .navbar-toggleable-md {
+  button {
+    background-color: white;
+  }
   h1 {
     color: black;
     margin-bottom: 60px;
-    float: left;
+
   }
+
   ul{
+    z-index: 1;
     font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
     li {
       a{
         color: black;
@@ -21,9 +55,24 @@ p {
   }
 }
 
+.fixed-bottom {
+  text-align: center;
+  ul {
+    margin: 5px auto;
+  }
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+  a {
+    color: white;
+  }
+}
+
 main {
   text-align: center;
-  margin-bottom: 100px;
+  margin-top: 50px;
+  margin-bottom: 180px;
 }
 
 .jumbotron {
@@ -38,8 +87,11 @@ main {
     height: 95%;
     width: 95%;
     border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+  margin: 30px auto;
   }
   p {
     width: 95%;
@@ -48,8 +100,18 @@ main {
 }
 
 .dressCode {
-  h1 {
-    margin-bottom: 20px;
+  .containerContent {
+    position: relative;
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+  img {
+    border-radius: 10px;;
+    margin-bottom: 30px;
+    filter: brightness(80%);
   }
   p {
     width: 95%;
@@ -57,10 +119,6 @@ main {
   }
   .container {
     margin: 20px auto;
-  }
-  img {
-    border-radius: 5px;
-    margin-bottom: 30px;
   }
 }
 
@@ -78,44 +136,32 @@ main {
 }
 
 .login {
+  width: 50%;
   h1 {
     margin-bottom: 30px;
+  }
+  .input {
+    width: 300px;
   }
   .btn {
     background-color: rgb(211, 74, 181);
     border-color: rgb(211, 74, 181);
   }
-  .input {
-    width: 300px;
+  a {
+    margin: 10px auto;
   }
-}
-
-.locations {
-  margin-top: 10px;
-  img {
-  border-radius: 10px;
-  margin-bottom: 15px;
+  .instagram {
+    border-style: solid;
+    border-color: rgb(65, 36, 213);
+    background-color: rgb(65, 36, 213);
+    color: white;
   }
-  ul {
-    list-style: none;
-  }
-  .col-lg-4 {
-    margin: 20px auto;
-  }
-}
-
-.show {
-  img {
-    margin-bottom: 20px;
-    border-radius: 10px;
-  }
-    text-align: left;
-    margin: 30px auto;
-  .posts{
-    color: rgb(211, 74, 181);
-  }
-  h5 {
-    text-align: center;
+  .github {
+    width: 219px;
+    border-style: solid;
+    border-color: rgb(60, 56, 60);
+    background-color: rgb(60, 56, 60);
+    color: white;
   }
 }
 
@@ -140,11 +186,152 @@ main {
   }
 }
 
-.postsNew {
-    color: rgb(211, 74, 181);
+.userEdit {
+  h1 {
+    margin-bottom: 30px;
   }
+  .btn {
+    background-color: rgb(211, 74, 181);
+    border-color: rgb(211, 74, 181);
+    color: white;
+  }
+}
 
-.postsPost {
+.locations {
+  margin-top: 10px;
+  img {
+  border-radius: 10px;
+  margin-bottom: 15px;
+  }
+  ul {
+    list-style: none;
+  }
+  .col-lg-4 {
+    margin: 20px auto;
+  }
+}
+
+.citiesShow {
+  text-align: left;
+  margin: 30px auto;
+  .info {
+    margin: 50px auto;
+  }
+  img {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .posts{
+    color: rgb(211, 74, 181);
+    display: block;
+  }
+  .postsText {
+    border-style: solid;
+    text-align: center;
+  }
+  .getShopping {
+    margin-top: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  h5 {
+    text-align: center;
+    color: rgb(211, 74, 181);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .btn {
+    color: white;
+    background-color: rgb(211, 74, 181);
+    width: 150px;
+    margin-top: 30px;
+  }
+  .button {
+    text-align: center;
+  }
+}
+
+.product {
+  width: 45%;
+  text-align: center;
+  margin: 30px auto;
+  display: inline-block;
+  .brandName {
+    text-align: center;
+  }
+  h5 {
+    width: 50%;
+    margin: 10px auto;
+    color: black;
+    text-transform: none;
+    font-weight: normal;
+  }
+  img {
+    object-fit: cover;
+    width: 190px;
+    height: 300px;
+  }
+}
+
+.citiesNew {
+  width: 50%;
+  .btn {
+    color: white;
+    background-color: rgb(211, 74, 181);
+    border-color: rgb(211, 74, 181);
+  }
+}
+
+.citiesEdit {
+  width: 50%;
+  .btn {
+    color: white;
+    background-color: rgb(211, 74, 181);
+    border-color: rgb(211, 74, 181);
+  }
+}
+
+
+.postsIndex {
+  margin: 30px auto;
+  img {
+    height: 310px;
+    width: 210px;
+  }
+  a.btn {
+    color: white;
+    background-color: rgb(211, 74, 181);
+  }
+}
+
+.postsEdit {
+  .btn {
+    color: white;
+    background-color: rgb(211, 74, 181);
+  }
+  label {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  input {
+    height: 30px;
+    width: 250px;
+  }
+  div {
+    margin: 20px auto;
+  }
+}
+
+.postsShow {
+  img {
+    object-fit: cover;
+    height: 400px;
+    width: 200px;
+  }
+}
+
+.postsNew {
   text-align: center;
   .btn {
     color: white;
@@ -155,6 +342,8 @@ main {
   }
 }
 
+
+
 .footerCaption {
   color: grey;
   margin: 0 auto;
@@ -162,13 +351,7 @@ main {
 }
 
 @media (min-width: 768px) {
-    .navbar .navbar-nav {
-        text-align: center;
+    .navbar-nav {
         margin: 0px auto;
-        position: relative;
-    }
-
-    .navbar .navbar-collapse {
-        text-align: center;
     }
 }

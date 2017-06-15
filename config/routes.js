@@ -12,13 +12,15 @@ const citiesController         = require('../controllers/cities');
 const secureRoute   = require('../lib/secureRoute');
 const upload = require('../lib/upload');
 const weatherController = require('../controllers/weather');
+const shopstyleController = require('../controllers/shopstyle');
 
 
 // A home route
 router.route('/')
   .get(statics.index);
 
-router.get('/weather/', weatherController.proxy);
+router.get('/weather', weatherController.proxy);
+router.get('/shopstyle', shopstyleController.proxy);
 
 router.route('/about')
   .get(statics.about);
@@ -84,6 +86,9 @@ router.route('/posts/:id/comments/:commentId')
 
 router.route('/oauth/github')
   .get(oauth.github);
+
+router.route('/oauth/instagram')
+  .get(oauth.instagram);
 
 router.all('*', (req, res) => res.notFound());
 

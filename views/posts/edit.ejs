@@ -1,9 +1,11 @@
-<form method="POST" action="/posts/<%=  post.id %>">
-  <input type="hidden" name="_method" value="PUT">
-  <div>
-    <label for="caption">Caption</label>
-    <input type="text" name="caption" id="caption" value="<%= post.caption %>" required>
-  </div>
+<div class="container postsEdit">
+  <form method="POST" action="/posts/<%=  post.id %>">
+    <input type="hidden" name="_method" value="PUT">
+    <div>
+      <label for="caption">Caption:</label><br>
+      <input type="text" name="caption" id="caption" value="<%= post.caption %>" required>
+    </div>
 
-  <button class="button">Update Post</button>
-</form>
+    <button class="btn">Update Post</button>
+  </form>
+</div>
