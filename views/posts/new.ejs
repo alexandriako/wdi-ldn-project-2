@@ -1,20 +1,39 @@
 <div class="container postsNew">
   <form method="POST" action="/posts" enctype="multipart/form-data">
+
     <div class="form-group">
       <label for="name">Name</label>
       <p class="control">
       <input type="text" name="name" id="name" required>
     </div>
+
     <div class="form-group">
       <label for="caption">Caption</label>
       <p class="control">
       <input type="caption" name="caption" id="caption" min="1" max="5" required>
     </div>
+
+    <label for="city">City</label><br>
+    <select name="city">
+      <option value="" disabled selected>Select please!</option>
+      <option value="san-francisco">San Francisco</option>
+      <option value="boston">Boston</option>
+      <option value="new-york">New York</option>
+      <option value="miami">Miami</option>
+      <option value="honolulu">Honolulu</option>
+      <option value="los-angeles">Los Angeles</option>
+      <option value="berlin">Berlin</option>
+      <option value="paris">Paris</option>
+      <option value="london">London</option>
+    </select>
+
     <div class="form-group">
       <label for="image">Image</label>
       <p class="control">
       <input type="file" name="image" id="image" required>
     </div>
+
     <button class="btn">Post</button>
+
   </form>
 </div>

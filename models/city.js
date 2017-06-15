@@ -11,4 +11,10 @@ const citySchema = new mongoose.Schema({
   lng: { type: Number }
 });
 
+citySchema
+  .virtual('cityQuery')
+  .get(function getCityQuery() {
+    return this.name.toLowerCase().replace(' ', '-');
+  });
+
 module.exports = mongoose.model('City', citySchema);

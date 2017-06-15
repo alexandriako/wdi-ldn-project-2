@@ -51,11 +51,10 @@ function getShopping(){
     for(let i = 0; i < data.products.length; i++){
       //prepend not html because it is a JSON string?
       $categories.append(`
-          <div class="product">
-            <div>
-              <a href="${data.products[i].clickUrl}" target="_blank"><img src="${data.products[i].image.sizes.Best.url}"></a>
+        <div class="product">
+              <div class="imageSizing"><a href="${data.products[i].clickUrl}" target="_blank"><img src="${data.products[i].image.sizes.Best.url}"></a></div>
               <div class="brandName"><h5>${data.products[i].brandedName}</h5></div>
-            </div>
+              <div class="brandName"><h5>${data.products[i].priceLabel}</h5></div>
           </div>
       `);
 

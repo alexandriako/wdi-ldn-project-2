@@ -3,9 +3,9 @@
   <div class="container info">
     <h3 class="data" data-location="<%= JSON.stringify({ lat: city.lat, lng: city.lng }) %>" data-category="<%= JSON.stringify({ id: city.categoryId }) %>"></h3>
     <img src="<%= city.showImage %>" width="100%">
-    <h4>State: <%= city.state %></h4>
-    <h4>Dress Code: <%= city.dressCode %></h4>
-    <h4>Current Weather: <span class="weather"></span></h4>
+    <h4><span class="title">State:</span> <%= city.state %></h4>
+    <h4><span class="title">Dress Code:</span>  <%= city.dressCode %></h4>
+    <h4><span class="title">Current Weather:</span> <span class="weather"></span></h4>
 
   </div>
 
@@ -15,13 +15,15 @@
     <% } else { %>
 
     <div>
-      <a class="posts" href="/posts"><h3 class="postsText"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Outfit Inspo</h3></a>
+      <a class="posts" href="/posts?city=<%= city.cityQuery %>"><h3 class="postsText"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Outfit Inspo</h3></a>
     </div>
 
     <div class="container">
       <h4 class="getShopping">Get Shopping</h4>
+      <hr>
       <span class="categories"></span>
 
+      <hr>
       <div class="button"><button class="btn">Más</button></div>
     </div>
 

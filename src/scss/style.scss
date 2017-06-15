@@ -96,6 +96,15 @@ main {
   p {
     width: 95%;
     margin: 5px auto;
+    line-height: 40px;
+  }
+  .styling {
+    color: black;
+    font-size: 24px;
+    font-family: 'f37_bella', sans-serif;
+  }
+  span {
+    font-weight: 700;
   }
 }
 
@@ -116,6 +125,7 @@ main {
   p {
     width: 95%;
     margin: 5px auto;
+    line-height: 40px;
   }
   .container {
     margin: 20px auto;
@@ -182,8 +192,13 @@ main {
   .deleteAccount {
     color: white;
     height: 42px;
-    background-color: rgb(211, 74, 181);
+    background-color: rgb(197, 37, 37);
   }
+}
+
+.btnNew {
+  color: white;
+  background-color: rgb(211, 74, 181);
 }
 
 .userEdit {
@@ -220,6 +235,11 @@ main {
   img {
     margin-bottom: 20px;
     border-radius: 10px;
+  }
+  .title {
+    font-family: 'f37_bella', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
   }
   .posts{
     color: rgb(211, 74, 181);
@@ -260,8 +280,12 @@ main {
   .brandName {
     text-align: center;
   }
+  .imageSizing {
+    height: 100%;
+    width: 100%;
+  }
   h5 {
-    width: 50%;
+
     margin: 10px auto;
     color: black;
     text-transform: none;
@@ -299,9 +323,10 @@ main {
     height: 310px;
     width: 210px;
   }
-  a.btn {
+  button {
     color: white;
     background-color: rgb(211, 74, 181);
+    margin: 30px auto;
   }
 }
 
@@ -328,6 +353,39 @@ main {
     object-fit: cover;
     height: 400px;
     width: 200px;
+    margin-bottom: 30px;
+  }
+  .info {
+    font-family: 'f37_bella', sans-serif;
+  }
+
+}
+
+.currentUserActions {
+  button{
+  background-color: rgb(211, 74, 181);
+  border: none;
+  width: 100px;
+  color: white;
+  font-family: 'Karla';
+  margin-bottom: 20px;
+  }
+  a {
+    background-color: rgb(211, 74, 181);
+    border: none;
+    width: 100px;
+    color: white;
+    font-family: 'Karla';
+  }
+}
+
+.userComments {
+  button {
+  background-color: rgb(211, 74, 181);
+  border: none;
+  width: 100px;
+  color: white;
+  font-family: 'Karla';
   }
 }
 
@@ -339,6 +397,9 @@ main {
   }
   input {
     width: 300px;
+  }
+  .form-group {
+    margin: 20px auto;
   }
 }
 

@@ -1,17 +1,21 @@
 <div class="container postsIndex">
 
-<ul class="row">
+  <% if(posts.length === 0) {%>
+    <p><span class="fa fa-frown-o" aria-hidden="true"></span> No posts yet!</p>
+  <% } else { %>
+
+<div class="container">
+  <div class="row">
     <% posts.forEach((post) => { %>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="container">
+      <div class="col-md-6 col-lg-4">
           <a href="/posts/<%= post.id %>"><img src="<%= post.imageSRC %>"></a>
           <h3><%= post.caption %></h3>
           </a>
           <h4>Created By: <%= post.createdBy.username %></h4>
-          <% }) %>
       </div>
+          <% }) %>
     </div>
-</ul>
+<% } %>
 
 <a href="/posts/new"><button class="btn">New</button></a>
 

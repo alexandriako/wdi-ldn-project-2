@@ -14,14 +14,14 @@ commentSchema.methods.belongsTo = function commentBelongsTo(user) {
 
 const postSchema = new mongoose.Schema({
   image: { type: String},
+  city: { type: String },
+  name: { type: String },
   caption: { type: String},
-  // cityName: {type: String},
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true},
   comments: [ commentSchema ]
 }, {
   timestamps: true
 });
-
 
 postSchema
 .virtual('imageSRC')

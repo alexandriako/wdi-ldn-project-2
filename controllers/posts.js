@@ -1,11 +1,18 @@
 const Post = require('../models/post');
 
 function indexRoute(req, res, next) {
+  console.log('req query q', req.query);
+  const regex = new RegExp(req.query.city, 'i');
+  const query = { city: regex };
+
   Post
-    .find()
+    .find(query)
     .populate('createdBy')
     .exec()
-    .then((posts) => res.render('posts/index', { posts }))
+    .then((posts) => {
+      console.log(posts);
+      res.render('posts/index', { posts });
+    })
     .catch(next);
 }
 
@@ -19,7 +26,7 @@ function createRoute(req, res, next) {
 
   Post
     .create(req.body)
-    .then(() => res.redirect('/posts'))
+    .then((post) => res.redirect(`/posts/${post.id}`))
     .catch((err) => {
       if(err.name === 'ValidationError') return res.badRequest(`/posts/new`, err.toString());
       next(err);

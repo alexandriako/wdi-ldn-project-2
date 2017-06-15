@@ -52,4 +52,8 @@ userSchema.methods.validatePassword = function validatePassword(password) {
   return bcrypt.compareSync(password, this.password);
 };
 
+userSchema.pre('remove', function removeUserPosts(next) {
+  this.model('Post').remove({ createdBy: this.id }, next);
+});
+
 module.exports = mongoose.model('User', userSchema);
