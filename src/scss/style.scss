@@ -92,6 +92,8 @@ main {
 
   h2 {
   margin: 30px auto;
+  font-family: 'f37_bella', sans-serif;
+  letter-spacing: 1px;
   }
   p {
     width: 95%;
@@ -116,6 +118,9 @@ main {
   h2 {
     font-size: 35px;
     font-weight: bold;
+    font-family: 'f37_bella', sans-serif;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
   }
   img {
     border-radius: 10px;;
@@ -405,11 +410,9 @@ main {
 
 
 
-.footerCaption {
-  color: grey;
-  margin: 0 auto;
-  text-align: center;
-}
+
+
+
 
 @media (min-width: 768px) {
     .navbar-nav {
