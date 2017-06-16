@@ -16,7 +16,7 @@
 
     accessTokenUrl: 'https://api.instagram.com/oauth/access_token',
 
-    redirectUri: 'https://secure-falls-18367.herokuapp.com/oauth/instagram',
+    redirectUri: process.env.NODE_ENV === 'production' ? 'https://secure-falls-18367.herokuapp.com/oauth/instagram' : 'http://localhost:8000/oauth/instagram',
 
     clientId: process.env.INSTAGRAM_CLIENT_ID,
 
