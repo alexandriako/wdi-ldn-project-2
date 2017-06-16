@@ -16,7 +16,7 @@
 
     accessTokenUrl: 'https://api.instagram.com/oauth/access_token',
 
-    redirectUri: 'http://localhost:8000/oauth/instagram',
+    redirectUri: 'https://secure-falls-18367.herokuapp.com/oauth/instagram',
 
     clientId: process.env.INSTAGRAM_CLIENT_ID,
 
