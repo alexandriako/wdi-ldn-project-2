@@ -9,7 +9,6 @@ function showRoute(req, res, next) {
       return res.render('users/show', { user });
     })
     .catch(next);
-
 }
 
 function editRoute(req, res, next) {
