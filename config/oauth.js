@@ -10,7 +10,6 @@
     }
   };
   console.log(github);
-
   const instagram = {
     loginUrl: 'https://api.instagram.com/oauth/authorize/',
 
