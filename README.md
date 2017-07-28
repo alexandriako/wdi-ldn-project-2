@@ -1,6 +1,6 @@
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
 
-# Project 1: WDI 27 
+# Project 1: WDI 27
 
 ## Introduction
 
@@ -58,7 +58,7 @@ These are the languages and softwares used in this game:
 - Git & github
 - Heroku
 
-Oauth and bcrypt are used for user registration and login and Instagram and Github are available as login options. The Darkstyle API is installed to receive live weather updates. The Shopstyle API is installed for access to fashion retail data that can be filtered by brand, category, color, pricd, etc. 
+Oauth and bcrypt are used for user registration and login and Instagram and Github are available as login options. The Darkstyle API is installed to receive live weather updates. The Shopstyle API is installed for access to fashion retail data that can be filtered by brand, category, color, pricd, etc.
 
 ### Challenges faced
 
