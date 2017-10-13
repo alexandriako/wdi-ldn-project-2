@@ -10,7 +10,7 @@ function sessionsCreate(req, res, next) {
     .findOne({ email: req.body.email })
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
-        return res.unauthorized('/login', 'Unknown credentials');
+        return res.unauthorized('/login', 'We can\'t find you...');
       }
 
       req.session.userId = user.id;
@@ -18,7 +18,7 @@ function sessionsCreate(req, res, next) {
 
       req.user = user;
 
-      req.flash('success', `Welcome back, ${user.username}!`);
+      req.flash('success', `Welcome back ${user.username}!`);
       res.redirect(`/`);
     })
     .catch(next);

@@ -32,7 +32,7 @@ function github(req, res, next) {
           user = new User({
             username: profile.login,
             email: profile.email,
-            image: profile.avatar_url
+            image: 'http://www.oldpotterybarn.co.uk/wp-content/uploads/2015/06/default-medium.png'
           });
         }
 
@@ -71,7 +71,7 @@ function instagram(req, res, next) {
       if(!user) {
         user = new User({
           username: token.user.username,
-          image: token.user.profile_picture
+          image: 'http://www.oldpotterybarn.co.uk/wp-content/uploads/2015/06/default-medium.png'
         });
       }
 
